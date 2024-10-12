@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sanganitra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        .placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .placeholder::after {
+            content: 'Image Placeholder';
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ABOUT SANGANITRA</h1>
+    
+    <div class="section">
+        <div class="placeholder"></div>
+        <h2>What is Sanganitra?</h2>
+        <p>Sanganitra is the computer-science oriented Special Interest Group of ACM NITK Chapter</p>
+    </div>
+    
+    <div class="section">
+        <h2>What do we do here at Sanganitra?</h2>
+        <p>We are a bunch of people from different walks of life united by a single goal, to code, and to code well. Split into five sub-interest groups Competitive Programming, Development, Systems, Machine Learning and Theoretical CS, we carry out lively discussions year around on the various developments and complications in the aforementioned fields. We believe that code can do miracles and our projects are a testament to this fact. We also host code oriented events throughout the year and try to establish a platform to bring the best out of the coder in everyone.</p>
+        <div class="placeholder"></div>
+    </div>
+    
+    <div class="section">
+        <div class="placeholder"></div>
+        <h2>Our Vision</h2>
+        <p>To ensure that the development of computer technology paves the path for a brighter future</p>
+    </div>
+    
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>To probe, promote and propagate knowledge in computer science and work towards overcoming 21st century challenges.</p>
+        <div class="placeholder"></div>
+    </div>
+
+    <script>
+        // This script will randomly change the background color of the placeholders every 3 seconds
+        function changeColors() {
+            const placeholders = document.querySelectorAll('.placeholder');
+            const colors = ['#ffcccb', '#ccffcc', '#cce6ff', '#ffffcc', '#e6ccff'];
+            
+            placeholders.forEach(placeholder => {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                placeholder.style.backgroundColor = randomColor;
+            });
+        }
+
+        setInterval(changeColors, 3000);
+        changeColors(); // Initial color change
+    </script>
+</body>
+</html>

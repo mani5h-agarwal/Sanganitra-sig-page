@@ -1,0 +1,336 @@
+
+.sig_about {
+  font-family: "Bona Nova", serif;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 1.3;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 3rem;
+}
+
+.about_box_1,
+.about_box_2,
+.vision,
+.mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.about1-inner,
+.about2-inner,
+.about3-inner,
+.about4-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_box_1_img,
+.about_box_2_img,
+.about_box_3_img,
+.about_box_4_img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.What_is,
+.What_do,
+.vision_text,
+.mission_text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.what_is_para,
+.what_do_para,
+.vision_subheading,
+.mission_subheading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 600px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.vision,
+.mission,
+.about_box_1,
+.about_box_2 {
+  background-color: #e8fbff;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about_box_1,
+  .vision{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about_box_2,
+  .mission{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about_box_1_img,
+  .about_box_2_img,
+  .about_box_3_img,
+  .about_box_4_img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .What_is,
+  .What_do,
+  .vision_text,
+  .mission_text {
+    font-size: 1.8rem;
+  }
+
+  .what_is_para,
+  .what_do_para,
+  .vision_subheading,
+  .mission_subheading {
+    font-size: 1rem;
+  }
+
+  .about1-inner,
+  .about2-inner,
+  .about3-inner,
+  .about4-inner {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sig_about {
+    font-size: 6vw;
+  }
+
+  .What_is,
+  .What_do,
+  .vision_text,
+  .mission_text {
+    font-size: 1.6rem;
+  }
+
+  .what_is_para,
+  .what_do_para,
+  .vision_subheading,
+  .mission_subheading {
+    font-size: 0.9rem;
+  }
+}
+
+.our_events_container {
+  padding-top: 4rem;
+  margin: 0 auto;
+  max-width: 90%;
+  
+}
+
+.our_events_title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.our_events_subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: gray;
+}
+
+
+
+.timeline_line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #000;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.event_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.event_number {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.event_name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.event_content {
+  text-align: center;
+}
+
+.event_description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.dot_1, .dot_2, .dot_3, .dot_4, .dot_5, .dot_6 {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .sig_about {
+    font-size: 6vw;
+  }
+
+  .What_is, .What_do, .vision_text, .mission_text {
+    font-size: 2rem;
+  }
+
+  .what_is_para, .what_do_para, .vision_subheading, .mission_subheading {
+    font-size: 1rem;
+  }
+
+  .our_events_title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_box_1_img, .about_box_2_img, .about_box_3_img, .about_box_4_img {
+    max-width: 100%;
+  }
+
+  .sig_about {
+    font-size: 7vw;
+  }
+}
+
+
+
+
+
+
+.card {
+  max-width: 350px;
+  background-color: white;
+  margin: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #d8f3ff;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-content {
+  padding-inline: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.image-placeholder {
+  background-color: #f0f0f0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events_timeline {
+  position: relative;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.timeline_line {
+  width: 2px;
+  background-color: #ccc;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left{
+  margin-top: 15rem;
+}
+
+.left,
+.right{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .events_timeline {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .left{
+    margin-top: 0rem;
+  }
+}
+
+
+
+
+
+
+

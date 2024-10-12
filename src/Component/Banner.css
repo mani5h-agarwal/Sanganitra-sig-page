@@ -1,0 +1,360 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.banner {
+
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  width: 100vw; /* Ensures the banner covers the full viewport width */
+  background: linear-gradient(to bottom, #3d95c5, #244774);
+  flex-direction: column;
+  justify-content: end;
+}
+
+.inner-banner{
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  gap: 1rem; 
+  justify-content: center;
+  z-index: 1;
+  /* border: 2px solid white; */
+}
+
+.heading-banner{
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+}
+
+.Acm_heading {
+  font-family: "Bona Nova";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2.5rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  margin: 0;
+}
+
+.sig_name {
+  font-family: "Bona Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6rem;
+  color: #ffffff;
+  opacity: 0; /* Initially hidden for animation */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+  margin: 0;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  width: 100%; /* Ensure the container takes the full width */
+  position: relative; /* Ensure the container is positioned correctly */
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1s forwards; /* Animation to fade in after 1 second */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.background-text-container {
+  position: relative;
+  width: 100vw; /* Ensure the container takes the full viewport width */
+  height: 21vw;
+  overflow: hidden; /* Hide overflow to ensure text stays within bounds */
+  display: flex;
+  align-items: end; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  z-index: 1;
+  /* border: 2px solid white; */
+  
+}
+.background-text {
+  position: absolute;
+  font-family: "Bona Nova";
+  font-style: normal;
+  
+  font-weight: 700;
+  font-size: 16vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  animation: moveText 15s linear infinite;
+}
+
+/* Keyframes for moving text animation */
+@keyframes moveText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Visibility transition when elements come into view */
+.in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
+.logos{
+  display: flex;
+  /* border: 2px solid white; */
+  top: 7rem;
+  right: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 52rem;
+}
+.sanganitra-logo{
+  opacity: 0.4;
+  width: 48rem;
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+}
+/* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+  .sig_name {
+    font-size: 5rem !important; /* Adjust font size for smaller screens */
+  }
+  .Acm_heading {
+    font-size: 2rem !important; /* Adjust font size for smaller screens */
+  }
+  .logos {
+    width: 40rem;
+  }
+  .sanganitra-logo{
+    width: 38rem;
+  }
+  .circle1{
+    width: 12.1rem;
+
+  }
+  .circle2{
+    width: 7.33rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sig_name {
+    font-size: 4rem !important; /* Adjust font size for tablets */
+  }
+  .Acm_heading {
+    font-size: 2rem !important; /* Adjust font size for tablets */
+  }
+  .logos {
+    width: 30rem;
+  }
+  .sanganitra-logo{
+    width: 28rem;
+  }
+  .circle1{
+    width: 10rem;
+
+  }
+  .circle2{
+    width: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sig_name {
+    font-size: 3rem !important; /* Adjust font size for mobile devices */
+  }
+  .Acm_heading {
+    font-size: 1.5rem !important; /* Adjust font size for mobile devices */
+    font-weight: 400;
+  }
+  .background-text-container {
+    margin-bottom: 5rem;
+  }
+  .logos {
+    transform: rotateZ(-30deg); /* Rotate 45 degrees along the X-axis */
+    width: 30rem;
+  }
+  .sanganitra-logo{
+    margin-left: 6rem;
+    margin-top: 6rem;
+    width: 28rem;
+  }
+  .circle1{
+    width: 10rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+  .circle2{
+    width: 6rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+
+.circle1{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate1 10s linear infinite; 
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+}
+.circle2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate2 10s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .sig_name {
+    font-size: 6rem; /* Adjust font size for smaller screens */
+  }
+  .Acm_heading {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sig_name {
+    font-size: 4rem; /* Adjust font size for tablets */
+  }
+  .Acm_heading {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .sig_name {
+    font-size: 2rem; /* Adjust font size for mobile devices */
+  }
+  .Acm_heading {
+    font-size: 1.5rem; /* Adjust font size for mobile devices */
+  }
+}
+
+
+.btn1:link,
+.btn2:link,
+.btn1:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  /* padding: 15px 40px; */
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn2:visited{
+  padding: 0.8rem 1.6rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn2-white{
+  border: 2px solid white;
+  color: white;
+}
+
+.btn1:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.btn1:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn1-white{
+  background-color: #fff;
+  color: #3d95c5;
+
+}
+
+.btn1::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn1-white::after {
+  background-color: #fff;
+}
+
+.btn1:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
