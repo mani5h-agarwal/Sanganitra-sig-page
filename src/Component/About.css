@@ -9,10 +9,7 @@
   margin-bottom: 3rem;
 }
 
-.about_box_1,
-.about_box_2,
-.vision,
-.mission {
+.about_box_left{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -20,29 +17,33 @@
   padding: 3rem 2rem;
   margin: 0 auto;
   max-width: 90%;
+  background-color: #e8fbff;
+  margin-top: 2rem;
+}
+.about_box_right{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 90%;
+  background-color: #e8fbff;
+  margin-top: 2rem;
 }
 
-.about1-inner,
-.about2-inner,
-.about3-inner,
-.about4-inner {
+.about-inner{
   display: flex;
   flex-direction: column;
 }
 
-.about_box_1_img,
-.about_box_2_img,
-.about_box_3_img,
-.about_box_4_img {
+.about_box_img{
   width: 100%;
   max-width: 400px;
   margin-bottom: 1.5rem;
 }
 
-.What_is,
-.What_do,
-.vision_text,
-.mission_text {
+.What_is{
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -51,10 +52,7 @@
   margin-bottom: 1rem;
 }
 
-.what_is_para,
-.what_do_para,
-.vision_subheading,
-.mission_subheading {
+.what_is_para{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -64,83 +62,69 @@
   line-height: 1.5;
 }
 
-.vision,
-.mission,
-.about_box_1,
-.about_box_2 {
-  background-color: #e8fbff;
-  margin-top: 2rem;
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .about_box_1,
-  .vision{
+  .sig_about {
+    font-size: 6vw;
+  }
+  .about_box_left,
+  .about_box_right{
     flex-direction: column;
     text-align: center;
   }
 
-  .about_box_2,
-  .mission{
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .about_box_1_img,
-  .about_box_2_img,
-  .about_box_3_img,
-  .about_box_4_img {
+  .about_box_img {
     margin-bottom: 1rem;
     max-width: 100%;
+    height: auto; /* Ensure the height adjusts automatically to maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
   }
 
-  .What_is,
-  .What_do,
-  .vision_text,
-  .mission_text {
+  .What_is{
     font-size: 1.8rem;
   }
 
-  .what_is_para,
-  .what_do_para,
-  .vision_subheading,
-  .mission_subheading {
+  .what_is_para{
     font-size: 1rem;
   }
 
-  .about1-inner,
-  .about2-inner,
-  .about3-inner,
-  .about4-inner {
+  .about-inner{
     text-align: center;
   }
+  .our_events_title {
+    font-size: 2.5rem;
+  }
 }
-
 @media (max-width: 480px) {
+  .about_box_left,
+  .about_box_right{
+    flex-direction: column;
+    text-align: center;
+  }
   .sig_about {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 
-  .What_is,
-  .What_do,
-  .vision_text,
-  .mission_text {
+  .What_is{
     font-size: 1.6rem;
   }
 
-  .what_is_para,
-  .what_do_para,
-  .vision_subheading,
-  .mission_subheading {
+  .what_is_para{
     font-size: 0.9rem;
+  }
+  .about_box_img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
 
 .our_events_container {
+  display: flex;
+  flex-direction: column;
   padding-top: 4rem;
   margin: 0 auto;
   max-width: 90%;
-  
+  align-items: center;
 }
 
 .our_events_title {
@@ -158,8 +142,6 @@
   margin-bottom: 3rem;
   color: gray;
 }
-
-
 
 .timeline_line {
   position: absolute;
@@ -209,47 +191,6 @@
   line-height: 1.5;
 }
 
-.dot_1, .dot_2, .dot_3, .dot_4, .dot_5, .dot_6 {
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .sig_about {
-    font-size: 6vw;
-  }
-
-  .What_is, .What_do, .vision_text, .mission_text {
-    font-size: 2rem;
-  }
-
-  .what_is_para, .what_do_para, .vision_subheading, .mission_subheading {
-    font-size: 1rem;
-  }
-
-  .our_events_title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about_box_1_img, .about_box_2_img, .about_box_3_img, .about_box_4_img {
-    max-width: 100%;
-  }
-
-  .sig_about {
-    font-size: 7vw;
-  }
-}
-
-
-
-
-
-
 .card {
   max-width: 350px;
   background-color: white;
@@ -257,7 +198,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -265,6 +206,7 @@
   padding: 25px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -296,7 +238,6 @@ p {
 
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: center;
 }
 
