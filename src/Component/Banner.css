@@ -132,7 +132,7 @@ html, body {
   align-items: center;
   width: 52rem;
 }
-.sanganitra-logo{
+.sig-logo{
   opacity: 0.4;
   width: 48rem;
   margin-top: 0.5rem;
@@ -149,7 +149,7 @@ html, body {
   .logos {
     width: 40rem;
   }
-  .sanganitra-logo{
+  .sig-logo{
     width: 38rem;
   }
   .circle1{
@@ -171,7 +171,7 @@ html, body {
   .logos {
     width: 30rem;
   }
-  .sanganitra-logo{
+  .sig-logo{
     width: 28rem;
   }
   .circle1{
@@ -198,7 +198,7 @@ html, body {
     transform: rotateZ(-30deg); /* Rotate 45 degrees along the X-axis */
     width: 30rem;
   }
-  .sanganitra-logo{
+  .sig-logo{
     margin-left: 6rem;
     margin-top: 6rem;
     width: 28rem;

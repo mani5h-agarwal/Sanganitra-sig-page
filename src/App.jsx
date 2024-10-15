@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
 import './App.css'
 import Banner from './Component/Banner'
 import About_sig  from './Component/About_sig'
 
-function App() {
-  const [count, setCount] = useState(0)
+// eslint-disable-next-line react/prop-types
+function App({ Sig, events }) {
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Banner/>
-      <About_sig/>
+      <Banner Sig={Sig}/>
+      <About_sig events={events} Sig={Sig}/>
     </>
   )
 }

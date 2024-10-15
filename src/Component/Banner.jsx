@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useSpring, animated, config } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "./Banner.css";
 
-
-const Banner = () => {
+const Banner = ({ Sig }) => {
   const { ref: headingRef, inView: headingInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -32,11 +32,10 @@ const Banner = () => {
     config: config.molasses,
     loop: { reverse: false },
   });
-  
 
   return (
     <div className="banner">
-      <div className="inner-banner" >
+      <div className="inner-banner">
         <div className="heading-banner">
           <animated.h1
             className="Acm_heading"
@@ -46,7 +45,7 @@ const Banner = () => {
             ACM NITK Chapter
           </animated.h1>
           <animated.h2 className="sig_name" ref={sigRef} style={sigSpring}>
-            SANGANITRA
+            {Sig.name ? Sig.name.toUpperCase() : "Sig Name"}
           </animated.h2>
         </div>
 
@@ -65,14 +64,28 @@ const Banner = () => {
       </div>
       <div className="background-text-container">
         <animated.div className="background-text" style={movingTextSpring}>
-          The home of code
+          {Sig.motto ? Sig.motto : "Sig motto"}
         </animated.div>
       </div>
-      <div className="logos">
-        <img className="sanganitra-logo" src="/Sanganitra logo.svg" alt="logo" />
-        <img className="circle1" src="/circle1.svg" alt="circle1" />
-        <img className="circle2" src="/circle2.svg" alt="circle2" />
-      </div>
+      {Sig.name == "Sanganitra" ? (
+        <div className="logos">
+          <img
+            className="sig-logo"
+            src="/Sanganitra logo.svg"
+            alt="logo"
+          />
+          <img className="circle1" src="/circle1.svg" alt="circle1" />
+          <img className="circle2" src="/circle2.svg" alt="circle2" />
+        </div>
+      ) : (
+        <div className="logos">
+          <img
+            className="sig-logo"
+            src={Sig.logo ? Sig.logo : "/Sanganitra logo.svg"}
+            alt="logo"
+          />
+        </div>
+      )}
     </div>
   );
 };
