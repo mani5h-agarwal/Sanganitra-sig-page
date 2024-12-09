@@ -12,7 +12,7 @@ html, body {
   position: relative;
   display: flex;
   flex: 1;
-  height: 100vh;
+  height: 90vh;
   width: 100vw; /* Ensures the banner covers the full viewport width */
   background: linear-gradient(to bottom, #3d95c5, #244774);
   flex-direction: column;
@@ -89,6 +89,7 @@ html, body {
   align-items: end; /* Center the text vertically */
   justify-content: center; /* Center the text horizontally */
   z-index: 1;
+  margin-top: 3vh;
   /* border: 2px solid white; */
   
 }
@@ -125,7 +126,7 @@ html, body {
 .logos{
   display: flex;
   /* border: 2px solid white; */
-  top: 7rem;
+  top: 1rem;
   right: 0;
   position: absolute;
   justify-content: center;

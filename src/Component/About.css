@@ -150,6 +150,7 @@
   width: 4px;
   height: 100%;
   background-color: #000;
+  z-index: -1;
 }
 
 .event {
@@ -269,6 +270,12 @@ p {
   }
 }
 
+
+@media (max-width: 500px) {
+  .our_events_subtitle {
+      font-size: 0.9rem;  /* Adjusts font size for smaller screens */
+  }
+}
 
 
 

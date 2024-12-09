@@ -8,11 +8,11 @@ import AboutBox from "./AboutBox";
 export const About_sig = ({ Sig, events }) => {
   return (
     <div>
-      <h1 className="sig_about">
+      {/* <h1 className="sig_about">
         <Fade duration={2000} triggerOnce="true" fraction={1}>
           {Sig.name ? "About " + Sig.name : "Sig Name"}
         </Fade>
-      </h1>
+      </h1> */}
       {/* {About.map((data, index) => (
         <AboutBox
           key={index}
