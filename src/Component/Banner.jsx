@@ -67,23 +67,41 @@ const Banner = ({ Sig }) => {
           {Sig.motto ? Sig.motto : "Sig motto"}
         </animated.div>
       </div>
-      {Sig.name == "Sanganitra" ? (
+      {Sig.name == "Kaaryavarta" && (
+        <div className="container-kar">
+          <img className="kar" src="/kar-whole.svg" alt="logo" />
+          <img className="kar-up-left" src="/kar-up.svg" alt="logo" />
+          <img className="kar-up-right" src="/kar-up.svg" alt="logo" />
+          <img className="kar-down" src="/kar-down.svg" alt="logo" />
+        </div>
+      )}
+      {Sig.name == "Saahitya" && (
+        <div className="container-saahitya">
+          <img className="saahitya-logo" src="/Saahitya.svg" alt="logo" />
+        </div>
+      )}
+      {Sig.name == "Yantrika" && (
+        <div className="container-yantrika">
+          <img className="yantrika-logo" src="/Yantrika.svg" alt="logo" />
+        </div>
+      )}
+      {Sig.name == "Vidyut" && (
+        <div className="container-saahitya">
+          <img className="saahitya-logo" src="/Vidyut.svg" alt="logo" />
+        </div>
+      )}
+      {Sig.name == "Abhivyakta" && (
+        <div className="container-abhi">
+          <img className="abhi-tri-logo" src="/abhi-triangle.svg" alt="logo" />
+          <img className="abhi-box-logo" src="/abhi-box.svg" alt="logo" />
+          <img className="abhi-circle-logo" src="/abhi-circle.svg" alt="logo" />
+        </div>
+      )}
+      {Sig.name == "Sanganitra" && (
         <div className="logos">
-          <img
-            className="sig-logo"
-            src="/Sanganitra logo.svg"
-            alt="logo"
-          />
+          <img className="sig-logo" src="/Sanganitra logo.svg" alt="logo" />
           <img className="circle1" src="/circle1.svg" alt="circle1" />
           <img className="circle2" src="/circle2.svg" alt="circle2" />
-        </div>
-      ) : (
-        <div className="logos">
-          <img
-            className="sig-logo"
-            src={Sig.logo ? Sig.logo : "/Sanganitra logo.svg"}
-            alt="logo"
-          />
         </div>
       )}
     </div>

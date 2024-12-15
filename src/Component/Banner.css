@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -8,7 +8,6 @@ html, body {
 }
 
 .banner {
-
   position: relative;
   display: flex;
   flex: 1;
@@ -18,19 +17,20 @@ html, body {
   background: linear-gradient(to bottom, #3d95c5, #244774);
   flex-direction: column;
   justify-content: end;
+  overflow: hidden;
 }
 
-.inner-banner{
+.inner-banner {
   display: flex;
   flex-direction: column;
   margin-left: 8vw;
-  gap: 1rem; 
+  gap: 1rem;
   justify-content: center;
   z-index: 1;
   /* border: 2px solid white; */
 }
 
-.heading-banner{
+.heading-banner {
   gap: 0.3rem;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,6 @@ html, body {
   margin: 0;
 }
 
-
 .buttons {
   display: flex;
   gap: 1.5rem;
@@ -92,13 +91,12 @@ html, body {
   z-index: 1;
   /* margin-top: 3vh; */
   /* border: 2px solid white; */
-  
 }
 .background-text {
   position: absolute;
   font-family: "Bona Nova";
   font-style: normal;
-  
+
   font-weight: 700;
   font-size: 16vw;
   text-align: center;
@@ -123,8 +121,7 @@ html, body {
   transform: translateY(0) !important;
 }
 
-
-.logos{
+.logos {
   display: flex;
   /* border: 2px solid white; */
   top: 1rem;
@@ -134,12 +131,207 @@ html, body {
   align-items: center;
   width: 52rem;
 }
-.sig-logo{
+.sig-logo {
   opacity: 0.4;
   width: 48rem;
   margin-top: 0.5rem;
   margin-right: 0.3rem;
 }
+.container-yantrika{
+  display: flex;
+  top: 3rem;
+  right: 10rem;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 22rem;
+  /* border: 1px solid white; */
+  opacity: 0.4;
+}
+.yantrika-logo {
+  width: 100%;
+  animation: up-down 2s infinite ease-in-out;
+}
+
+@keyframes up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.container-saahitya {
+  display: flex;
+  top: 3rem;
+  right: 5rem;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 38rem;
+  /* border: 1px solid white; */
+}
+.saahitya-logo {
+  opacity: 0.4;
+  width: 100%;
+  animation: swing 2.5s infinite;
+  transform-origin: bottom center;
+}
+@keyframes swing {
+  20% {
+    transform: rotate(9deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container-abhi {
+  display: flex;
+  top: 5rem;
+  right: 5rem;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  /* border: 1px solid white; */
+  opacity: 0.4;
+}
+.abhi-tri-logo {
+  width: 100%;
+}
+.abhi-box-logo {
+  position: absolute;
+  top: -3.5rem;
+  left: 6rem;
+  width: 4.3rem;
+  animation: vibrate 1s infinite ease-in-out;
+}
+
+
+.container-kar{
+  display: flex;
+  top: 3rem;
+  right: 6rem;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 36rem;
+  /* border: 1px solid white; */
+  opacity: 0.4;
+}
+
+.kar{
+  width: 100%;
+}
+
+.kar-up-left{
+  position: absolute;
+  width: 4rem;
+  left: 9.75rem;
+  animation: swing-kar-up 2.5s infinite;
+  transform-origin: bottom center;
+
+  top: 9rem;
+}
+
+.kar-up-right{
+  position: absolute;
+  width: 4rem;
+  top: 9rem;
+  animation: swing-kar-up 2.5s infinite;
+  transform-origin: bottom center;
+  right: 9.85rem;
+}
+
+.kar-down{
+  position: absolute;
+  top: 1.5rem;
+  width: 4rem;
+  z-index: -1;
+  animation: swing-kar-down 2.5s infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing-kar-down {
+  0% {
+    transform: rotate(-9deg);
+  }
+  25% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(-9deg);
+  }
+  75% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(-9deg);
+  }
+}
+
+
+@keyframes swing-kar-up {
+  0% {
+    transform: rotate(9deg);
+  }
+  25% {
+    transform: rotate(-9deg);
+  }
+  50% {
+    transform: rotate(9deg);
+  }
+  75% {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(9deg);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.abhi-circle-logo {
+  position: absolute;
+  top: 4rem;
+  width: 14rem;
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Media queries for different screen sizes */
 @media (max-width: 1200px) {
   .sig_name {
@@ -151,15 +343,50 @@ html, body {
   .logos {
     width: 40rem;
   }
-  .sig-logo{
+  .sig-logo {
     width: 38rem;
   }
-  .circle1{
+  .circle1 {
     width: 12.1rem;
-
   }
-  .circle2{
+  .circle2 {
     width: 7.33rem;
+  }
+  .container-saahitya {
+    width: 30rem;
+  }
+
+  .container-abhi {
+    width: 35rem;
+  }
+  .abhi-circle-logo {
+    top: 3.5rem;
+    width: 11rem;
+  }
+  .abhi-box-logo {
+    top: -3rem;
+    left: 5rem;
+    width: 3.5rem;
+  }
+  .container-kar{
+    width: 30rem;
+  }
+  .kar-up-left{
+    width: 3.5rem;
+    left: 8rem;
+    top: 7rem;
+  }
+  .kar-up-right{
+    width: 3.5rem;
+    top: 7rem;
+    right: 8.2rem;
+  }
+  .kar-down{
+    width: 3.5rem;
+    top: 1rem;
+  }
+  .container-yantrika{
+    width: 18rem;
   }
 }
 
@@ -173,15 +400,49 @@ html, body {
   .logos {
     width: 30rem;
   }
-  .sig-logo{
+  .sig-logo {
     width: 28rem;
   }
-  .circle1{
+  .circle1 {
     width: 10rem;
-
   }
-  .circle2{
+  .circle2 {
     width: 6rem;
+  }
+  .container-saahitya {
+    width: 25rem;
+  }
+  .container-abhi {
+    width: 28rem;
+  }
+  .abhi-circle-logo {
+    top: 3rem;
+    width: 8.5rem;
+  }
+  .abhi-box-logo {
+    top: -2.5rem;
+    left: 4rem;
+    width: 3rem;
+  }
+  .container-kar{
+    width: 25rem;
+  }
+  .kar-up-left{
+    width: 3rem;
+    left: 6.7rem;
+    top: 5.8rem;
+  }
+  .kar-up-right{
+    width: 3rem;
+    top: 5.8rem;
+    right: 6.75rem;
+  }
+  .kar-down{
+    width: 3rem;
+    top: 0.5rem;
+  }
+  .container-yantrika{
+    width: 18rem;
   }
 }
 
@@ -200,34 +461,91 @@ html, body {
     transform: rotateZ(-30deg); /* Rotate 45 degrees along the X-axis */
     width: 30rem;
   }
-  .sig-logo{
+  .sig-logo {
     margin-left: 6rem;
     margin-top: 6rem;
     width: 28rem;
   }
-  .circle1{
+  .circle1 {
     width: 10rem;
     margin-left: 3rem;
     margin-top: 3rem;
   }
-  .circle2{
+  .circle2 {
     width: 6rem;
     margin-left: 3rem;
     margin-top: 3rem;
   }
+  .container-saahitya {
+    top: 5rem;
+    right: 0rem;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  .saahitya-logo {
+    width: 80%;
+  }
+  .container-abhi {
+    top: 8rem;
+    right: 0rem;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  .abhi-tri-logo {
+    width: 95%;
+  }
+  .abhi-circle-logo {
+    top: 2.5rem;
+    width: 7.5rem;
+  }
+  .abhi-box-logo {
+    top: -2rem;
+    left: 4.5rem;
+    width: 2.5rem;
+  }
+  .container-kar{
+    top: 3rem;
+    right: 0rem;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  .kar{
+    width: 90%;
+  }
+  .kar-up-left{
+    width: 2.5rem;
+    left: 7.5rem;
+    top: 6rem;
+  }
+  .kar-up-right{
+    width: 2.5rem;
+    top: 6rem;
+    right: 7.6rem;
+  }
+  .kar-down{
+    width: 2.5rem;
+    top: 1rem;
+  }
+  .container-yantrika{
+    top: 3rem;
+    right: 0rem;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  .yantrika-logo {
+    width: 75%;
+  }
 }
 
-
-.circle1{
-
+.circle1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: rotate1 10s linear infinite; 
+  animation: rotate1 10s linear infinite;
   transform: translate(-50%, -50%);
   opacity: 0.4;
 }
-.circle2{
+.circle2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -280,10 +598,9 @@ html, body {
   }
 }
 
-
 .btn1:link,
 .btn2:link,
-.btn1:visited{
+.btn1:visited {
   text-transform: uppercase;
   text-decoration: none;
   /* padding: 15px 40px; */
@@ -296,7 +613,7 @@ html, body {
   font-weight: 600;
 }
 
-.btn2:visited{
+.btn2:visited {
   padding: 0.8rem 1.6rem;
   display: inline-block;
   border-radius: 100px;
@@ -306,26 +623,25 @@ html, body {
   font-weight: 600;
 }
 
-.btn2-white{
+.btn2-white {
   border: 2px solid white;
   color: white;
 }
 
-.btn1:hover{
+.btn1:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 
-.btn1:active{
+.btn1:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn1-white{
+.btn1-white {
   background-color: #fff;
   color: #3d95c5;
-
 }
 
 .btn1::after {

@@ -1,7 +1,7 @@
 const Sig=
   {
     id: 1,
-    name: "Sanganitra",
+    name: "Yantrika",
     title: "Sanganitra is the computer science oriented specia...",
     description: "We are a bunch of people from different walks of l...",
     vision: "To ensure that the development of computing techno...",
